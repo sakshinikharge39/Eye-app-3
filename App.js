@@ -5,12 +5,14 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import CustomDrawer from "./src/drawer/CustomDrawer";
 import Login from "./src/normal/Login";
+import Home from "./src/drawer/Home";
 
 export default function App() {
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      
         <Stack.Screen
           name="CustomDrawer"
           component={CustomDrawer}
@@ -19,6 +21,11 @@ export default function App() {
         <Stack.Screen
           name="Login"
           component={Login}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={Home}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

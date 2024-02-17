@@ -5,7 +5,7 @@ import {
   GestureHandlerRootView,
   FlatList,
 } from "react-native-gesture-handler";
-import Screen1 from "../bottom/Screen1";
+import Home from "./Home";
 import { AntDesign } from "@expo/vector-icons";
 import Setting from "./Setting";
 
@@ -132,7 +132,7 @@ export default function CustomDrawer() {
           <TouchableOpacity style={{ marginLeft: 20 }} onPress={toggleMenu}>
             <Image
               source={require("../../assets/logo.jpeg")}
-              style={{ width: 30, height: 30 }}
+              style={{ width: 70, height: 40 }}
             />
           </TouchableOpacity>
           <Text style={{ marginLeft: 20, fontSize: 20, fontWeight: "800" }}>
@@ -140,7 +140,7 @@ export default function CustomDrawer() {
           </Text>
         </View>
         <View>
-          {selectedMenuItem === 0 && <Screen1 />}
+          {selectedMenuItem === 0 && <Home />}
           {selectedMenuItem === 1 && <BlinkRate />}
           {selectedMenuItem === 2 && <Distance />}
           {selectedMenuItem === 3 && <Setting />}
